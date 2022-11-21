@@ -1,38 +1,117 @@
-.App {
+/* utiles */
+p{
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.centrar{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+body{
+  background-color: #8D8D8D;
+  margin: 0;
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+}
+.app{
+  height: 99vh;
+}
+.contenedor{
+  width: 600px;
+  height: 300px;
+  border-radius: 10px;
+  margin: auto;
+  background-color: #B3B3B3;
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+}
+.teclado{
+  width: 50%;
+  height: 100%;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3,1fr);
+  place-items: center;
+}
+.tecla{
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+  background: #808080;
+  box-shadow: 2px 2px 8px  #222;  
+  border-radius: 5px; 
+}
+.tecla:active{
+  background-color: orange;
+  box-shadow: none;  
+}
+/* Controles */
+.controles{
+  width: 50%;
+  height: 100%;
+  flex-direction: column;
+  gap: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.contInter{
+  position: relative;
+  width: 60px;
+  height: 24px;
+  background-color: black;
+  
 }
+.boton-left{
+  position: absolute;
+  width: 26px;
+  height: 18px;
+  background-color: blue;
+  top: 3px;
+  left: 3px;
+}
+.boton-right{
+  position: absolute;
+  width: 26px;
+  height: 18px;
+  background-color: blue;
+  top: 3px;
+  right: 3px;
+}
+.display{
+  width: 150px;
+  height: 40px;
+  background-color: gray;
+  border-radius: 5px;
+}
+
+
+
+/* Rasgos generales */
+input[type="range"] {
+  appearance: none;
+  cursor: pointer;
+  width: 180px;
+}
+
+/* barra horizontal */
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #4f4f4f;
+  height: 5px;
+  box-shadow: 1px 2px 5px #222;
+}
+
+/* barra vertical */
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  margin-top: -9px; /* Centers thumb on the track */
+  background-color: blue;
+  height: 25px;
+  width: 9px;
+  box-shadow: 1px 2px 5px #222;
+}
+
